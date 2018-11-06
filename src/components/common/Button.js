@@ -8,9 +8,8 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     borderWidth: 1,
     borderColor: '#ddd',
-    marginLeft: 5,
-    marginRight: 5,
-    borderRadius: 3
+    margin: 5,
+    borderRadius: 3,
   },
   text: {
     fontSize: 16,
@@ -21,11 +20,11 @@ const styles = StyleSheet.create({
   }
 })
 
-const Button = ({ onPress, title }) => {
+const Button = ({ onPress, children }) => {
   const { button, text } = styles;
   return(
     <TouchableOpacity style={button} onPress={onPress}>
-      <Text style={text}>{ title }</Text>
+      <Text style={text}>{ children }</Text>
     </TouchableOpacity>
   );
 };
